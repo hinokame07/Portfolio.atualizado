@@ -38,6 +38,7 @@ const Hero: React.FC = () => {
           <div className="w-32 h-32 rounded-full overflow-hidden mb-6">
             <img 
               src="https://i.pinimg.com/736x/d0/f7/b2/d0f7b2b45252f4273568b50b4344e7d0.jpg" alt="Hinokame Avatar"
+              height={128} width={128}
             />
           </div>
           
