@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <div className="w-32 h-32 rounded-full overflow-hidden mb-6">
             <img 
-              src="icon11.jpg" alt="Hinokame Avatar"
+              src="https://i.pinimg.com/736x/d0/f7/b2/d0f7b2b45252f4273568b50b4344e7d0.jpg" alt="Hinokame Avatar"
             />
           </div>
           
