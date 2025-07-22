@@ -37,8 +37,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <div className="w-32 h-32 rounded-full overflow-hidden mb-6">
             <img 
-              src="https://media.discordapp.net/attachments/614577998535852064/1391637713605627995/d98f6b1b3dde5c47794d0c663ba0fb70.jpg?ex=686c9f1e&is=686b4d9e&hm=326803cdded55156f6eb5ee43130c407af886ac28db401ae985403a57bb98f43&=&format=webp&width=662&height=654" 
-              className="w-full h-full object-cover"
+              src="icon11.png"
             />
           </div>
           
