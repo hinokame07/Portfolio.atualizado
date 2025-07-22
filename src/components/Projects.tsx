@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
       title: 'Portfolio Pessoal',
       description: 'Meu portfólio pessoal desenvolvido com React e Tailwind CSS',
       tags: ['React', 'Tailwind CSS', 'Portfolio'],
-      image: 'portfolio.jpg',
+      image: 'https://i.pinimg.com/736x/a7/5d/4a/a75d4a7e372c0c253dcdaa77adf71f83.jpg',
       link: 'https://www.hinodev.xyz/',
       github: 'https://github.com/hinokame07/Portfolio.atualizado',
       details: 'Este é o meu portfólio pessoal, desenvolvido com React e Tailwind CSS. Ele serve como uma vitrine para meus projetos e habilidades, além de ser uma demonstração do meu estilo de design e desenvolvimento. O portfólio é responsivo e otimizado para diferentes dispositivos, refletindo minha atenção aos detalhes e compromisso com a qualidade.'
