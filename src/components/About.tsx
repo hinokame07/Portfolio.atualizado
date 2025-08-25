@@ -33,7 +33,7 @@ const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-sm text-gray-500 dark:text-gray-400">Idade</h4>
-                  <p className="text-gray-900 dark:text-white font-medium">13 anos (19/07/2011)</p>
+                  <p className="text-gray-900 dark:text-white font-medium">14 anos (19/07/2011)</p>
                 </div>
               </div>
               
