@@ -36,7 +36,7 @@ const Projects: React.FC = () => {
       title: 'Charles Leclerc Biography',
       description: 'Site biográfico dedicado ao piloto de Fórmula 1 Charles Leclerc',
       tags: ['HTML', 'CSS', 'JavaScript', 'Biography'],
-      image: 'https://imgur.com/VmjscFk',
+      image: 'https://i.imgur.com/VmjscFk.png',
       link: 'https://charles-leclerc.vercel.app/',
       details: 'Site biográfico completo sobre Charles Leclerc, piloto monegasco da Ferrari na Fórmula 1. O projeto apresenta sua trajetória, conquistas e momentos marcantes na carreira, com design responsivo e interface moderna.'
     },
@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
       title: 'Ayrton Senna Biography',
       description: 'Tributo ao lendário piloto brasileiro Ayrton Senna',
       tags: ['HTML', 'CSS', 'JavaScript', 'Tribute'],
-      image: 'https://imgur.com/H3MKsov',
+      image: 'https://i.imgur.com/H3MKsov.png',
       link: 'https://ayrton-senna-seven.vercel.app/',
       details: 'Site em homenagem a Ayrton Senna, o maior piloto brasileiro de todos os tempos. Apresenta sua história, conquistas na Fórmula 1 e seu legado que transcende o automobilismo, inspirando gerações.'
     },
@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
       title: 'ADO Biography',
       description: 'Site biográfico da cantora japonesa ADO',
       tags: ['HTML', 'CSS', 'JavaScript', 'Music'],
-      image: 'https://imgur.com/T3pQMcg',
+      image: 'https://i.imgur.com/T3pQMcg.png',
       link: 'https://ado-theta.vercel.app/',
       details: 'Site dedicado à cantora japonesa ADO, conhecida por suas músicas virais e colaborações com animes populares. O projeto explora sua carreira musical e impacto na cultura pop japonesa.'
     },
@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
       title: 'Frieren Portfolio',
       description: 'Portfólio temático inspirado no anime Frieren',
       tags: ['React', 'CSS', 'Anime Theme', 'Portfolio'],
-      image: 'https://imgur.com/x2vldO0',
+      image: 'https://i.imgur.com/x2vldO0.png',
       link: 'https://frieren-sandy.vercel.app/',
       details: 'Portfólio com design inspirado no anime "Frieren: Beyond Journey\'s End". Combina elementos visuais do anime com funcionalidades modernas de portfólio, criando uma experiência única e imersiva.'
     },
@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
       title: 'Professional Animated Portfolio',
       description: 'Portfólio com animações profissionais e design moderno',
       tags: ['React', 'Animations', 'Modern Design', 'Portfolio'],
-      image: 'https://imgur.com/mQfZ2VV',
+      image: 'https://i.imgur.com/mQfZ2VV.png',
       link: 'https://aaaaaaaaaaaaaaaaaaaaaaa-lake.vercel.app/',
       details: 'Portfólio profissional com animações sofisticadas e design contemporâneo. Demonstra técnicas avançadas de animação web e interações fluidas, criando uma experiência visual impressionante.'
     },
