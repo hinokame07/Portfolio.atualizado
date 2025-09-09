@@ -101,4 +101,3 @@ const Skills: React.FC = () => {
       </div>
     </section>
   );
-};
