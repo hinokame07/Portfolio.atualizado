@@ -36,7 +36,7 @@ const Projects: React.FC = () => {
       title: 'Charles Leclerc Biography',
       description: 'Site biográfico dedicado ao piloto de Fórmula 1 Charles Leclerc',
       tags: ['HTML', 'CSS', 'JavaScript', 'Biography'],
-      image: 'https://images.pexels.com/photos/12789516/pexels-photo-12789516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://imgur.com/VmjscFk',
       link: 'https://charles-leclerc.vercel.app/',
       details: 'Site biográfico completo sobre Charles Leclerc, piloto monegasco da Ferrari na Fórmula 1. O projeto apresenta sua trajetória, conquistas e momentos marcantes na carreira, com design responsivo e interface moderna.'
     },
@@ -54,8 +54,8 @@ const Projects: React.FC = () => {
       title: 'ADO Biography',
       description: 'Site biográfico da cantora japonesa ADO',
       tags: ['HTML', 'CSS', 'JavaScript', 'Music'],
-      image: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      link: 'https://ayrton-senna-seven.vercel.app/',
+      image: 'https://imgur.com/T3pQMcg',
+      link: 'https://ado-theta.vercel.app/',
       details: 'Site dedicado à cantora japonesa ADO, conhecida por suas músicas virais e colaborações com animes populares. O projeto explora sua carreira musical e impacto na cultura pop japonesa.'
     },
     {
@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
       title: 'Frieren Portfolio',
       description: 'Portfólio temático inspirado no anime Frieren',
       tags: ['React', 'CSS', 'Anime Theme', 'Portfolio'],
-      image: 'https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://imgur.com/x2vldO0',
       link: 'https://frieren-sandy.vercel.app/',
       details: 'Portfólio com design inspirado no anime "Frieren: Beyond Journey\'s End". Combina elementos visuais do anime com funcionalidades modernas de portfólio, criando uma experiência única e imersiva.'
     },
@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
       title: 'Professional Animated Portfolio',
       description: 'Portfólio com animações profissionais e design moderno',
       tags: ['React', 'Animations', 'Modern Design', 'Portfolio'],
-      image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://imgur.com/mQfZ2VV',
       link: 'https://aaaaaaaaaaaaaaaaaaaaaaa-lake.vercel.app/',
       details: 'Portfólio profissional com animações sofisticadas e design contemporâneo. Demonstra técnicas avançadas de animação web e interações fluidas, criando uma experiência visual impressionante.'
     },
