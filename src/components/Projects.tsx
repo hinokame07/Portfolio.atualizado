@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
       title: 'Ayrton Senna Biography',
       description: 'Tributo ao lendário piloto brasileiro Ayrton Senna',
       tags: ['HTML', 'CSS', 'JavaScript', 'Tribute'],
-      image: 'https://images.pexels.com/photos/8986207/pexels-photo-8986207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://imgur.com/H3MKsov',
       link: 'https://ayrton-senna-seven.vercel.app/',
       details: 'Site em homenagem a Ayrton Senna, o maior piloto brasileiro de todos os tempos. Apresenta sua história, conquistas na Fórmula 1 e seu legado que transcende o automobilismo, inspirando gerações.'
     },
