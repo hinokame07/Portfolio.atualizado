@@ -16,8 +16,6 @@
     @apply antialiased;
     transform: scale(0.9);
     transform-origin: top center;
-    overflow-x: hidden;
-    position: relative;
 }
 
   }
