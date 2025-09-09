@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            Olá, sou <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Hinokame</span>
+            Olá, sou <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 animate-pulse">Hinokame</span>
           </h1>
           
           <h2 className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 h-8">
@@ -65,25 +65,25 @@ const Hero: React.FC = () => {
           }}>
             <a 
               href="#projects" 
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors flex items-center gap-2"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center gap-2 group"
             >
-              <Code size={18} />
+              <Code size={18} className="group-hover:rotate-12 transition-transform duration-300" />
               Meus Projetos
             </a>
             <a 
               href="#contact" 
-              className="px-6 py-3 bg-white dark:bg-gray-800 border border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-full transition-colors flex items-center gap-2"
+              className="px-6 py-3 bg-white dark:bg-gray-800 border border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center gap-2 group"
             >
-              <MessageCircle size={18} />
+              <MessageCircle size={18} className="group-hover:bounce transition-transform duration-300" />
               Fale Comigo
             </a>
             <a 
               href="https://github.com/hinokame07" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-gray-800 hover:bg-black text-white rounded-full transition-colors flex items-center gap-2"
+              className="px-6 py-3 bg-gray-800 hover:bg-black text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center gap-2 group"
             >
-              <Github size={18} />
+              <Github size={18} className="group-hover:rotate-12 transition-transform duration-300" />
               GitHub
             </a>
           </div>

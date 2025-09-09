@@ -28,7 +28,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#home" className="flex items-center space-x-2 text-2xl font-bold text-blue-600 dark:text-blue-400">
           <span>
-            hinokame<span className="text-purple-600 dark:text-purple-400">.dev</span>
+            hino<span className="text-purple-600 dark:text-purple-400">.dev</span>
           </span>
         </a>
         {/* Slogan ou saudação */}

@@ -17,8 +17,8 @@ const Contact: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          <div>
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+          <div className="animate-fade-in-up">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Como me encontrar</h3>
               
               <div className="space-y-6">
@@ -62,8 +62,8 @@ const Contact: React.FC = () => {
             </div>
           </div>
           
-          <div>
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Ou me mande uma mensagem</h3>
               
               <form
@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
                 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                  className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Enviar mensagem
                 </button>

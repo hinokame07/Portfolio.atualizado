@@ -188,7 +188,7 @@ const Projects: React.FC = () => {
               <SwiperSlide key={project.id}>
                 <div
                   onClick={() => openProjectDetails(project)}
-                  className="cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group"
+                  className="cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img

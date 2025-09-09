@@ -13,8 +13,8 @@ const About: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md mb-6">
+          <div className="order-2 md:order-1 animate-fade-in-up">
+            <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md mb-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                 Quem sou eu
               </h3>
@@ -28,7 +28,7 @@ const About: React.FC = () => {
             
             <div className="flex flex-col space-y-4">
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400 mr-4">
+                <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400 mr-4 hover:scale-110 transition-transform duration-300">
                   <Calendar size={24} />
                 </div>
                 <div>
@@ -38,7 +38,7 @@ const About: React.FC = () => {
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400 mr-4">
+                <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400 mr-4 hover:scale-110 transition-transform duration-300">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -48,7 +48,7 @@ const About: React.FC = () => {
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400 mr-4">
+                <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400 mr-4 hover:scale-110 transition-transform duration-300">
                   <Code size={24} />
                 </div>
                 <div>
@@ -59,8 +59,8 @@ const About: React.FC = () => {
             </div>
           </div>
           
-          <div className="order-1 md:order-2">
-            <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+          <div className="order-1 md:order-2 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                 Minha História
               </h3>

@@ -8,8 +8,8 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Hinokame</h3>
+          <div className="animate-fade-in-up">
+            <h3 className="text-xl font-bold mb-4">Hino</h3>
             <p className="text-gray-400 mb-4">
               Jovem desenvolvedor apaixonado por tecnologia e programação, construindo o futuro um código de cada vez.
             </p>
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          <div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <h3 className="text-xl font-bold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-xl font-bold mb-4">Sobre Mim</h3>
             <p className="text-gray-400 mb-2">
               Olá! Sou Felipe, desenvolvedor focado em criar soluções criativas e eficientes. Gosto de aprender coisas novas e compartilhar conhecimento.
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               Sempre aberto para novos desafios e colaborações!
             </p>
           </div>
-          <div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <h3 className="text-xl font-bold mb-4">Tecnologias</h3>
             <ul className="space-y-2">
               <li className="text-gray-400">JavaScript</li>
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
             <ul className="space-y-2">
               <li className="text-gray-400">São Paulo, Brasil</li>
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
         
         <div className="pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-400">
-            &copy; {currentYear} Hinokame. Todos os direitos reservados.
+            &copy; {currentYear} Hino. Todos os direitos reservados.
           </p>
           <p className="text-gray-500 text-sm mt-2 flex items-center justify-center">
             Feito com <Heart size={14} className="mx-1 text-red-500" /> e React

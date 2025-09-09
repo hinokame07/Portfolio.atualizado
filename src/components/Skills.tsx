@@ -58,14 +58,14 @@ const Skills: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md">
+          <div className="bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
               <span className="text-2xl mr-2">💻</span> Habilidades Técnicas
             </h3>
             {programmingSkills.map(renderSkillBar)}
           </div>
           
-          <div className="bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md">
+          <div className="bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
               <span className="text-2xl mr-2">🧠</span> Habilidades Pessoais
             </h3>
@@ -74,6 +74,7 @@ const Skills: React.FC = () => {
         </div>
         
         <div className="mt-16 bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md">
+        <div className="mt-16 bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
             <span className="text-2xl mr-2">🚀</span> Ferramentas & Tecnologias
           </h3>
@@ -89,9 +90,9 @@ const Skills: React.FC = () => {
             ].map((tool) => (
               <div 
                 key={tool.name} 
-                className="flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center"
+                className="flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-105 text-center group"
               >
-                <span className="text-3xl mb-2">{tool.icon}</span>
+                <span className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">{tool.icon}</span>
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{tool.name}</span>
               </div>
             ))}
