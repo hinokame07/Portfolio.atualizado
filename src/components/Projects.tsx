@@ -33,6 +33,51 @@ const Projects: React.FC = () => {
     },
     {
       id: 2,
+      title: 'Charles Leclerc Biography',
+      description: 'Site biográfico dedicado ao piloto de Fórmula 1 Charles Leclerc',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Biography'],
+      image: 'https://images.pexels.com/photos/12789516/pexels-photo-12789516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      link: 'https://charles-leclerc.vercel.app/',
+      details: 'Site biográfico completo sobre Charles Leclerc, piloto monegasco da Ferrari na Fórmula 1. O projeto apresenta sua trajetória, conquistas e momentos marcantes na carreira, com design responsivo e interface moderna.'
+    },
+    {
+      id: 3,
+      title: 'Ayrton Senna Biography',
+      description: 'Tributo ao lendário piloto brasileiro Ayrton Senna',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Tribute'],
+      image: 'https://images.pexels.com/photos/8986207/pexels-photo-8986207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      link: 'https://ayrton-senna-seven.vercel.app/',
+      details: 'Site em homenagem a Ayrton Senna, o maior piloto brasileiro de todos os tempos. Apresenta sua história, conquistas na Fórmula 1 e seu legado que transcende o automobilismo, inspirando gerações.'
+    },
+    {
+      id: 4,
+      title: 'ADO Biography',
+      description: 'Site biográfico da cantora japonesa ADO',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Music'],
+      image: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      link: 'https://ayrton-senna-seven.vercel.app/',
+      details: 'Site dedicado à cantora japonesa ADO, conhecida por suas músicas virais e colaborações com animes populares. O projeto explora sua carreira musical e impacto na cultura pop japonesa.'
+    },
+    {
+      id: 5,
+      title: 'Frieren Portfolio',
+      description: 'Portfólio temático inspirado no anime Frieren',
+      tags: ['React', 'CSS', 'Anime Theme', 'Portfolio'],
+      image: 'https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      link: 'https://frieren-sandy.vercel.app/',
+      details: 'Portfólio com design inspirado no anime "Frieren: Beyond Journey\'s End". Combina elementos visuais do anime com funcionalidades modernas de portfólio, criando uma experiência única e imersiva.'
+    },
+    {
+      id: 6,
+      title: 'Professional Animated Portfolio',
+      description: 'Portfólio com animações profissionais e design moderno',
+      tags: ['React', 'Animations', 'Modern Design', 'Portfolio'],
+      image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      link: 'https://aaaaaaaaaaaaaaaaaaaaaaa-lake.vercel.app/',
+      details: 'Portfólio profissional com animações sofisticadas e design contemporâneo. Demonstra técnicas avançadas de animação web e interações fluidas, criando uma experiência visual impressionante.'
+    },
+    {
+      id: 7,
       title: 'Servidor Discord',
       description: 'Comunidade no Discord que chegou a ter 5 mil membros ativos',
       tags: ['Comunidade', 'Gestão', 'Discord'],
@@ -40,7 +85,7 @@ const Projects: React.FC = () => {
       details: 'Criei e administrei um servidor no Discord que atingiu a marca de 5 mil membros. Essa experiência me ensinou muito sobre gestão de comunidades online, moderação e como criar um ambiente digital acolhedor. Apesar do servidor ter encerrado suas atividades, o aprendizado sobre engajamento e construção de comunidade permanece comigo.'
     },
     {
-      id: 3,
+      id: 8,
       title: 'Sistema de Estudo',
       description: 'Plataforma de organização de estudos desenvolvida no Notion',
       tags: ['Notion', 'Produtividade', 'Educação'],
@@ -48,7 +93,7 @@ const Projects: React.FC = () => {
       details: 'Desenvolvi um sistema completo de organização de estudos no Notion, com planos estruturados, acompanhamento de progresso e recursos educacionais. Esta ferramenta me ajudou a sistematizar meu aprendizado em programação e outras áreas, permitindo um progresso mais eficiente e consistente.'
     },
     {
-      id: 4,
+      id: 9,
       title: 'Portfolio Pessoal',
       description: 'Meu portfólio pessoal desenvolvido com React e Tailwind CSS',
       tags: ['React', 'Tailwind CSS', 'Portfolio'],
@@ -85,12 +130,12 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Carousel com padding lateral para os botões */}
-        <div className="relative overflow-visible px-10">
+        <div className="relative overflow-visible px-16">
 
           {/* Botão Esquerda */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full shadow transition-colors"
+            className="absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
             aria-label="Anterior"
           >
             <svg
@@ -109,7 +154,7 @@ const Projects: React.FC = () => {
           {/* Botão Direita */}
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full shadow transition-colors"
+            className="absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
             aria-label="Próximo"
           >
             <svg
