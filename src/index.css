@@ -5,6 +5,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    transform: scale(0.9);
+    transform-origin: top center; /* Mantém o zoom fixo no topo */
+    width: 111.11%; /* Evita barras de rolagem indesejadas */
   }
   
   body {
