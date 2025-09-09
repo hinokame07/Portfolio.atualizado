@@ -32,9 +32,9 @@ const Skills: React.FC = () => {
         <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">{skill.level}%</span>
       </div>
       <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-        <div 
+        <div
           className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full transition-all duration-1000 ease-out"
-          style={{ 
+          style={{
             width: `${skill.level}%`,
             animation: 'progressAnimation 1.5s ease-out forwards'
           }}
@@ -56,7 +56,7 @@ const Skills: React.FC = () => {
             Estou sempre buscando aprimorar e expandir meus conhecimentos.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
@@ -64,7 +64,7 @@ const Skills: React.FC = () => {
             </h3>
             {programmingSkills.map(renderSkillBar)}
           </div>
-          
+
           <div className="bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
               <span className="text-2xl mr-2">🧠</span> Habilidades Pessoais
@@ -72,13 +72,13 @@ const Skills: React.FC = () => {
             {softSkills.map(renderSkillBar)}
           </div>
         </div>
-        
-        <div className="mt-16 bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md">
+
+        {/* Seção de ferramentas */}
         <div className="mt-16 bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
             <span className="text-2xl mr-2">🚀</span> Ferramentas & Tecnologias
           </h3>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {[
               { name: 'Visual Studio Code', icon: '📝' },
@@ -88,8 +88,8 @@ const Skills: React.FC = () => {
               { name: 'Vercel', icon: '▲' },
               { name: 'Replit', icon: '⚙️' }
             ].map((tool) => (
-              <div 
-                key={tool.name} 
+              <div
+                key={tool.name}
                 className="flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-105 text-center group"
               >
                 <span className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">{tool.icon}</span>
@@ -101,3 +101,6 @@ const Skills: React.FC = () => {
       </div>
     </section>
   );
+};
+
+export default Skills;
