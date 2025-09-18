@@ -45,7 +45,7 @@ export const fetchDiscordUser = async (userId: string): Promise<string> => {
   } catch (error) {
     console.error('Erro ao buscar avatar do Discord:', error);
     // Retorna imagem padrão em caso de erro
-    return 'https://i.pinimg.com/736x/d0/f7/b2/d0f7b2b45252f4273568b50b4344e7d0.jpg';
+    return 'https://i.pinimg.com/originals/44/83/f9/4483f9260bacfdd5875c52df5942b6a9.gif';
   }
 };
 
