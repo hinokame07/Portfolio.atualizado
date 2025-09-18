@@ -8,7 +8,7 @@ export interface DiscordUser {
   global_name?: string;
 }
 
-export const DISCORD_USER_ID = '1126978048045826108'; // Substitua pelo seu ID do Discord
+export const DISCORD_USER_ID = '947989757751881758'; // Substitua pelo seu ID do Discord
 
 /**
  * Busca informações do usuário do Discord usando uma API proxy
