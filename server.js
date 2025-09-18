@@ -12,7 +12,7 @@ app.use(express.json());
 app.get('/api/discord-user/:userId', async (req, res) => {
   try {
     const { userId } = req.params;
-    const botToken = process.env.DISCORD_BOT_TOKEN || 'Bot YOUR_DISCORD_BOT_TOKEN';
+    const botToken = "MTQxODM3OTc1MjUzMTY5Mzc3OQ.GTNwAz.nZaW_yqCGUkgSj3IB2YaAW7kwmEm6PgBzcxFOM" || 'Bot YOUR_DISCORD_BOT_TOKEN';
     
     const response = await fetch(`https://discord.com/api/v10/users/${userId}`, {
       headers: {
