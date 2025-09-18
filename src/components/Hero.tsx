@@ -1,11 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Code, MessageCircle, ArrowDown } from 'lucide-react';
+import { fetchDiscordUser, DISCORD_USER_ID } from '../utils/discord';
 
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
+  const [discordAvatar, setDiscordAvatar] = useState<string>('');
+  const [isLoadingAvatar, setIsLoadingAvatar] = useState(true);
   
   const fullText = 'Desenvolvedor & Entusiasta de Tecnologia';
   const [typingComplete, setTypingComplete] = useState(false);
+
+  const fetchDiscordAvatar = async () => {
+    try {
+      setIsLoadingAvatar(true);
+      const avatarUrl = await fetchDiscordUser(DISCORD_USER_ID);
+      setDiscordAvatar(avatarUrl);
+    } catch (error) {
+      console.error('Erro ao buscar avatar do Discord:', error);
+      setDiscordAvatar('https://i.pinimg.com/736x/d0/f7/b2/d0f7b2b45252f4273568b50b4344e7d0.jpg');
+    } finally {
+      setIsLoadingAvatar(false);
+    }
+  };
 
   useEffect(() => {
     if (displayText.length < fullText.length) {
@@ -17,6 +33,13 @@ const Hero: React.FC = () => {
       setTypingComplete(true);
     }
   }, [displayText]);
+
+  useEffect(() => {
+    fetchDiscordAvatar();
+    // Atualizar avatar a cada 10 minutos
+    const interval = setInterval(fetchDiscordAvatar, 10 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
@@ -35,15 +58,32 @@ const Hero: React.FC = () => {
       
       <div className="container mx-auto px-4 py-16 z-10">
         <div className="flex flex-col items-center text-center">
-          <div className="w-32 h-32 rounded-full overflow-hidden mb-6">
+          <div className="w-32 h-32 rounded-full overflow-hidden mb-6 relative group">
+            {isLoadingAvatar && (
+              <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse rounded-full flex items-center justify-center">
+                <div className="text-gray-400 dark:text-gray-500">
+                  <svg className="w-8 h-8 animate-spin" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                </div>
+              </div>
+            )}
             <img 
-              src="https://i.pinimg.com/736x/d0/f7/b2/d0f7b2b45252f4273568b50b4344e7d0.jpg" alt="Hinokame Avatar"
-              height={128} width={128}
+              src={discordAvatar || 'https://i.pinimg.com/736x/d0/f7/b2/d0f7b2b45252f4273568b50b4344e7d0.jpg'} 
+              alt="Hino Avatar"
+              className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-110 ${isLoadingAvatar ? 'opacity-0' : 'opacity-100'}`}
+              onLoad={() => setIsLoadingAvatar(false)}
+              onError={() => {
+                setDiscordAvatar('https://i.pinimg.com/736x/d0/f7/b2/d0f7b2b45252f4273568b50b4344e7d0.jpg');
+                setIsLoadingAvatar(false);
+              }}
             />
+            <div className="absolute inset-0 rounded-full border-4 border-blue-500 dark:border-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            Olá, sou <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 animate-pulse">Hinokame</span>
+            Olá, sou <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 animate-pulse">Hino</span>
           </h1>
           
           <h2 className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 h-8">
