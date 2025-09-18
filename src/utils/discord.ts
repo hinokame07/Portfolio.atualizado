@@ -16,15 +16,19 @@ export const DISCORD_USER_ID = '947989757751881758'; // Substitua pelo seu ID do
  */
 export const fetchDiscordUser = async (userId: string): Promise<string> => {
   try {
-    // Usando um serviço proxy público para buscar dados do Discord
-    // Alternativa: você pode criar seu próprio endpoint
-    const response = await fetch(`https://discordlookup.mesalytic.moe/v1/user/${userId}`);
+    // Usando nosso próprio endpoint proxy para evitar problemas de CORS
+    const response = await fetch(`/api/discord-user/${userId}`);
     
     if (!response.ok) {
       throw new Error('Falha ao buscar dados do Discord');
     }
     
     const userData = await response.json();
+    
+    // Verificar se houve erro no backend
+    if (userData.error) {
+      throw new Error(userData.message || 'Erro no servidor');
+    }
     
     // Construir URL do avatar
     if (userData.avatar && userData.avatar.id) {
