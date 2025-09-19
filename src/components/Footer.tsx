@@ -5,20 +5,19 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 border-t border-gray-800 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           <div className="animate-fade-in-up">
             <h3 className="text-xl font-bold mb-4">Hino</h3>
-            <p className="text-gray-400 mb-4">
-              Jovem desenvolvedor apaixonado por tecnologia e programação, construindo o futuro um código de cada vez.
+            <p className="text-gray-300 mb-4">
+              Desenvolvedor Full-Stack especializado em criar soluções digitais inovadoras que transformam ideias em realidade. 
+              Comprometido com excelência técnica e impacto positivo através da tecnologia.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://github.com/hinokame07" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd"></path>
-                </svg>
-              </a>
+            <div className="flex space-x-2">
+              <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700">Full-Stack</span>
+              <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700">React</span>
+              <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700">Node.js</span>
             </div>
           </div>
           
@@ -26,54 +25,73 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-white transition-colors">Início</a>
+                <a href="#home" className="text-gray-300 hover:text-purple-400 transition-colors">Início</a>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors">Sobre</a>
+                <a href="#about" className="text-gray-300 hover:text-purple-400 transition-colors">Sobre</a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-400 hover:text-white transition-colors">Projetos</a>
+                <a href="#projects" className="text-gray-300 hover:text-purple-400 transition-colors">Projetos</a>
               </li>
               <li>
-                <a href="#skills" className="text-gray-400 hover:text-white transition-colors">Habilidades</a>
+                <a href="#skills" className="text-gray-300 hover:text-purple-400 transition-colors">Habilidades</a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contato</a>
+                <a href="#contact" className="text-gray-300 hover:text-purple-400 transition-colors">Contato</a>
               </li>
-            </ul>
-          </div>
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h3 className="text-xl font-bold mb-4">Sobre Mim</h3>
-            <p className="text-gray-400 mb-2">
-              Olá! Sou Felipe, desenvolvedor focado em criar soluções criativas e eficientes. Gosto de aprender coisas novas e compartilhar conhecimento.
-            </p>
-            <p className="text-gray-400">
-              Sempre aberto para novos desafios e colaborações!
-            </p>
-          </div>
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <h3 className="text-xl font-bold mb-4">Tecnologias</h3>
-            <ul className="space-y-2">
-              <li className="text-gray-400">JavaScript</li>
-              <li className="text-gray-400">Python</li>
-              <li className="text-gray-400">HTML & CSS</li>
-              <li className="text-gray-400">Node.js</li>
-              <li className="text-gray-400">Discord.js</li>
             </ul>
           </div>
           
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <h3 className="text-xl font-bold mb-4">Contato</h3>
-            <ul className="space-y-2">
-              <li className="text-gray-400">São Paulo, Brasil</li>
-              <li className="text-gray-400">trabalhohino@gmail.com</li>
-              <li className="text-gray-400">Discord: hino07</li>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <h3 className="text-xl font-bold mb-4">Especialidades</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                Desenvolvimento Web Full-Stack
+              </li>
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                Arquitetura de Sistemas
+              </li>
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                Automação e Integração
+              </li>
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                UI/UX Design
+              </li>
+              <li className="flex items-center text-gray-300">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                Gestão de Projetos
+              </li>
             </ul>
           </div>
         </div>
         
-        <div className="pt-8 border-t border-gray-800 text-center">
-          <p className="text-gray-400">
+        <div className="pt-8 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 mb-4 md:mb-0">
+              &copy; {currentYear} Hino. Todos os direitos reservados.
+            </p>
+            <div className="flex items-center space-x-4">
+              <span className="text-gray-500 text-sm">Feito com</span>
+              <Heart size={14} className="text-red-500" />
+              <span className="text-gray-500 text-sm">e tecnologias modernas</span>
+            </div>
+          </div>
+          <div className="text-center mt-4">
+            <p className="text-gray-500 text-sm">
+              Desenvolvedor Full-Stack • São Paulo, Brasil • trabalhohino@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
             &copy; {currentYear} Hino. Todos os direitos reservados.
           </p>
           <p className="text-gray-500 text-sm mt-2 flex items-center justify-center">

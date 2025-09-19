@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,20 +19,20 @@ const Header: React.FC = () => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg shadow-blue-500/10 py-2'
-          : 'bg-transparent py-4'
+          ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg shadow-purple-500/10 py-2'
+          : 'bg-gray-900/50 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#home" className="flex items-center space-x-2 text-2xl font-bold">
-          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent hover:from-pink-500 hover:via-purple-500 hover:to-blue-400 transition-all duration-500">
-            HIno<span className="text-cyan-400">.dev</span>
+          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
+            HIno<span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">.dev</span>
           </span>
         </a>
         
         {/* Professional tagline */}
-        <span className="hidden md:inline text-gray-400 ml-6 italic text-sm">
-          Transformando ideias em código • Criando o futuro digital
+        <span className="hidden lg:inline text-gray-300 ml-6 italic text-sm">
+          Desenvolvedor Full-Stack • Especialista em Soluções Digitais • Inovação Tecnológica
         </span>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -43,32 +43,12 @@ const Header: React.FC = () => {
             <a href="#skills" className="nav-link">Habilidades</a>
             <a href="#contact" className="nav-link">Contato</a>
           </nav>
-          <div className="flex items-center space-x-4">
-            <a
-              href="https://github.com/hinokame07"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Ver GitHub"
-              className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:scale-110"
-            >
-              <Github size={20} />
-            </a>
-          </div>
         </div>
 
-        <div className="md:hidden flex items-center space-x-4">
-          <a
-            href="https://github.com/hinokame07"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ver GitHub"
-            className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:scale-110"
-          >
-            <Github size={20} />
-          </a>
+        <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-300 hover:text-blue-400 transition-colors"
+            className="text-gray-300 hover:text-purple-400 transition-colors"
             aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -78,7 +58,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-sm shadow-lg transform transition-transform duration-300 ease-in-out ${
+        className={`md:hidden absolute top-full left-0 w-full bg-gray-900/98 backdrop-blur-sm shadow-lg transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-full'
         }`}
       >

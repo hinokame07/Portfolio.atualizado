@@ -27,13 +27,13 @@ const Skills: React.FC = () => {
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center">
           <span className="mr-2 text-xl">{skill.icon}</span>
-          <span className="font-medium text-gray-800 dark:text-gray-200">{skill.name}</span>
+          <span className="font-medium text-gray-200">{skill.name}</span>
         </div>
-        <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">{skill.level}%</span>
+        <span className="text-sm font-semibold text-purple-400">{skill.level}%</span>
       </div>
-      <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+      <div className="h-3 bg-gray-600 rounded-full overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full transition-all duration-1000 ease-out"
+          className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 ease-out"
           style={{
             width: `${skill.level}%`,
             animation: 'progressAnimation 1.5s ease-out forwards'

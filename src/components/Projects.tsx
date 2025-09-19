@@ -25,11 +25,11 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Bot Akishiro',
-      description: 'Bot para Discord desenvolvido com JavaScript/Node.js que gerencia tickets e parcerias',
-      tags: ['JavaScript', 'Node.js', 'Discord.js'],
+      title: 'Sistema de Automação Inteligente',
+      description: 'Plataforma robusta de automação desenvolvida com JavaScript/Node.js para gestão de processos e integrações',
+      tags: ['JavaScript', 'Node.js', 'API Integration', 'Automation'],
       image: 'https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      details: 'O Akishiro começou como um simples bot de tickets e evoluiu para um sistema completo de gerenciamento de parcerias no Discord. Desenvolvido com Node.js e Discord.js, ele automatiza processos e facilita a comunicação entre usuários. Entre os desafios superados estava a hospedagem, que foi viabilizada através de doações e ajuda de amigos.'
+      details: 'Sistema avançado de automação que evoluiu de funcionalidades básicas para uma plataforma completa de gestão de processos. Desenvolvido com Node.js e múltiplas integrações de API, automatiza fluxos de trabalho complexos e facilita a comunicação entre sistemas. Superei desafios significativos de arquitetura, escalabilidade e otimização de performance.'
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
       tags: ['HTML', 'CSS', 'JavaScript', 'Biography'],
       image: 'https://i.imgur.com/VmjscFk.png',
       link: 'https://charles-leclerc.vercel.app/',
-      details: 'Site biográfico completo sobre Charles Leclerc, piloto monegasco da Ferrari na Fórmula 1. O projeto apresenta sua trajetória, conquistas e momentos marcantes na carreira, com design responsivo e interface moderna.'
+      details: 'Site biográfico completo sobre Charles Leclerc, piloto monegasco da Ferrari na Fórmula 1. O projeto apresenta sua trajetória, conquistas e momentos marcantes na carreira, com design responsivo, interface moderna e otimizações de performance para uma experiência de usuário excepcional.'
     },
     {
       id: 3,
@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
       tags: ['HTML', 'CSS', 'JavaScript', 'Tribute'],
       image: 'https://i.imgur.com/H3MKsov.png',
       link: 'https://ayrton-senna-seven.vercel.app/',
-      details: 'Site em homenagem a Ayrton Senna, o maior piloto brasileiro de todos os tempos. Apresenta sua história, conquistas na Fórmula 1 e seu legado que transcende o automobilismo, inspirando gerações.'
+      details: 'Site em homenagem a Ayrton Senna, o maior piloto brasileiro de todos os tempos. Apresenta sua história, conquistas na Fórmula 1 e seu legado que transcende o automobilismo. Desenvolvido com foco em storytelling digital e experiência imersiva, inspirando gerações através da tecnologia.'
     },
     {
       id: 4,
@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
       tags: ['HTML', 'CSS', 'JavaScript', 'Music'],
       image: 'https://i.imgur.com/T3pQMcg.png',
       link: 'https://ado-theta.vercel.app/',
-      details: 'Site dedicado à cantora japonesa ADO, conhecida por suas músicas virais e colaborações com animes populares. O projeto explora sua carreira musical e impacto na cultura pop japonesa.'
+      details: 'Site dedicado à cantora japonesa ADO, conhecida por suas músicas virais e colaborações com animes populares. O projeto explora sua carreira musical e impacto na cultura pop japonesa, com design inspirado na estética musical contemporânea e navegação intuitiva.'
     },
     {
       id: 5,
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
       tags: ['React', 'CSS', 'Anime Theme', 'Portfolio'],
       image: 'https://i.imgur.com/x2vldO0.png',
       link: 'https://frieren-sandy.vercel.app/',
-      details: 'Portfólio com design inspirado no anime "Frieren: Beyond Journey\'s End". Combina elementos visuais do anime com funcionalidades modernas de portfólio, criando uma experiência única e imersiva.'
+      details: 'Portfólio com design inspirado no anime "Frieren: Beyond Journey\'s End". Combina elementos visuais temáticos com funcionalidades modernas de portfólio, demonstrando habilidades em design criativo, React e criação de experiências únicas e imersivas.'
     },
     {
       id: 6,
@@ -74,33 +74,32 @@ const Projects: React.FC = () => {
       tags: ['React', 'Animations', 'Modern Design', 'Portfolio'],
       image: 'https://i.imgur.com/mQfZ2VV.png',
       link: 'https://aaaaaaaaaaaaaaaaaaaaaaa-lake.vercel.app/',
-      details: 'Portfólio profissional com animações sofisticadas e design contemporâneo. Demonstra técnicas avançadas de animação web e interações fluidas, criando uma experiência visual impressionante.'
+      details: 'Portfólio profissional com animações sofisticadas e design contemporâneo. Demonstra técnicas avançadas de animação web, micro-interações e transições fluidas, criando uma experiência visual impressionante que destaca competências técnicas em desenvolvimento frontend moderno.'
     },
     {
       id: 7,
-      title: 'Servidor Discord',
-      description: 'Comunidade no Discord que chegou a ter 5 mil membros ativos',
-      tags: ['Comunidade', 'Gestão', 'Discord'],
+      title: 'Gestão de Comunidades Digitais',
+      description: 'Desenvolvimento e gestão de comunidades online com milhares de membros ativos',
+      tags: ['Community Management', 'Digital Strategy', 'Leadership'],
       image: 'https://i.pinimg.com/736x/b6/58/a3/b658a3981724a7bd4d94f2cd061a04df.jpg',
-      details: 'Criei e administrei um servidor no Discord que atingiu a marca de 5 mil membros. Essa experiência me ensinou muito sobre gestão de comunidades online, moderação e como criar um ambiente digital acolhedor. Apesar do servidor ter encerrado suas atividades, o aprendizado sobre engajamento e construção de comunidade permanece comigo.'
+      details: 'Desenvolvi e gerenciei comunidades digitais que alcançaram milhares de membros ativos. Esta experiência me proporcionou conhecimentos valiosos sobre liderança digital, estratégias de engajamento, moderação de conteúdo e criação de ambientes online saudáveis. Aprendi sobre psicologia de comunidades, gestão de conflitos e construção de relacionamentos digitais duradouros.'
     },
     {
       id: 8,
-      title: 'Sistema de Estudo',
-      description: 'Plataforma de organização de estudos desenvolvida no Notion',
-      tags: ['Notion', 'Produtividade', 'Educação'],
+      title: 'Plataforma de Produtividade Educacional',
+      description: 'Sistema avançado de organização e acompanhamento de estudos com metodologias otimizadas',
+      tags: ['Productivity', 'Education Tech', 'System Design'],
       image: 'https://i.pinimg.com/736x/2c/08/68/2c0868a78119b73f9131248bd0fa84e3.jpg',
-      details: 'Desenvolvi um sistema completo de organização de estudos no Notion, com planos estruturados, acompanhamento de progresso e recursos educacionais. Esta ferramenta me ajudou a sistematizar meu aprendizado em programação e outras áreas, permitindo um progresso mais eficiente e consistente.'
+      details: 'Criei um sistema abrangente de gestão educacional com metodologias de aprendizado otimizadas, tracking de progresso avançado e recursos interativos. Esta plataforma revolucionou minha abordagem ao aprendizado, implementando técnicas de gamificação, análise de dados de performance e metodologias ágeis aplicadas à educação.'
     },
     {
       id: 9,
-      title: 'Portfolio Pessoal',
-      description: 'Meu portfólio pessoal desenvolvido com React e Tailwind CSS',
-      tags: ['React', 'Tailwind CSS', 'Portfolio'],
+      title: 'Portfolio Profissional Avançado',
+      description: 'Portfólio pessoal de alta performance desenvolvido com React, TypeScript e Tailwind CSS',
+      tags: ['React', 'TypeScript', 'Tailwind CSS', 'Performance'],
       image: 'https://i.pinimg.com/736x/a7/5d/4a/a75d4a7e372c0c253dcdaa77adf71f83.jpg',
       link: 'https://www.hinodev.xyz/',
-      github: 'https://github.com/hinokame07/Portfolio.atualizado',
-      details: 'Este é o meu portfólio pessoal, desenvolvido com React e Tailwind CSS. Ele serve como uma vitrine para meus projetos e habilidades, além de ser uma demonstração do meu estilo de design e desenvolvimento. O portfólio é responsivo e otimizado para diferentes dispositivos, refletindo minha atenção aos detalhes e compromisso com a qualidade.'
+      details: 'Meu portfólio profissional desenvolvido com tecnologias modernas: React, TypeScript e Tailwind CSS. Representa uma vitrine completa das minhas competências técnicas e criativas, com foco em performance, acessibilidade e experiência do usuário. Implementa práticas avançadas de SEO, otimização de imagens e design responsivo, demonstrando meu compromisso com excelência técnica e atenção aos detalhes.'
     },
   ];
 
@@ -116,16 +115,16 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Meus <span className="text-blue-600 dark:text-blue-400">Projetos</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Meus <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Projetos</span>
           </h2>
-          <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6" />
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Conheça alguns dos projetos que desenvolvi durante minha jornada como programador.
-            Cada um representa um passo importante no meu aprendizado.
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6" />
+          <p className="text-gray-300 max-w-3xl mx-auto">
+            Explore uma seleção dos projetos que desenvolvi ao longo da minha jornada como desenvolvedor.
+            Cada projeto representa não apenas uma solução técnica, mas também um marco no meu crescimento profissional e criativo.
           </p>
         </div>
 
@@ -135,7 +134,7 @@ const Projects: React.FC = () => {
           {/* Botão Esquerda */}
           <button
             onClick={handlePrev}
-            className="absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+            className="absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
             aria-label="Anterior"
           >
             <svg
@@ -154,7 +153,7 @@ const Projects: React.FC = () => {
           {/* Botão Direita */}
           <button
             onClick={handleNext}
-            className="absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+            className="absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
             aria-label="Próximo"
           >
             <svg
@@ -188,7 +187,7 @@ const Projects: React.FC = () => {
               <SwiperSlide key={project.id}>
                 <div
                   onClick={() => openProjectDetails(project)}
-                  className="cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                  className="cursor-pointer bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group border border-gray-700"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -203,29 +202,18 @@ const Projects: React.FC = () => {
                             e.stopPropagation();
                             openProjectDetails(project);
                           }}
-                          className="text-white bg-blue-600 hover:bg-blue-700 p-2 rounded-full transition-colors"
+                          className="text-white bg-purple-600 hover:bg-purple-700 p-2 rounded-full transition-colors"
                         >
                           <Info size={18} />
                         </button>
                         <div className="flex space-x-2">
-                          {project.github && (
-                            <a
-                              href={project.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={(e) => e.stopPropagation()}
-                              className="text-white bg-gray-800 hover:bg-black p-2 rounded-full transition-colors"
-                            >
-                              <GitHub size={18} />
-                            </a>
-                          )}
                           {project.link && (
                             <a
                               href={project.link}
                               target="_blank"
                               rel="noopener noreferrer"
                               onClick={(e) => e.stopPropagation()}
-                              className="text-white bg-purple-600 hover:bg-purple-700 p-2 rounded-full transition-colors"
+                              className="text-white bg-pink-600 hover:bg-pink-700 p-2 rounded-full transition-colors"
                             >
                               <ExternalLink size={18} />
                             </a>
@@ -235,13 +223,13 @@ const Projects: React.FC = () => {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    <p className="text-gray-300 mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, index) => (
                         <span
                           key={index}
-                          className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 text-xs rounded-full"
+                          className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700"
                         >
                           {tag}
                         </span>
@@ -261,7 +249,7 @@ const Projects: React.FC = () => {
           onClick={closeProjectDetails}
         >
           <div
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-auto"
+            className="bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-auto border border-gray-700"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative h-56">
@@ -279,36 +267,25 @@ const Projects: React.FC = () => {
             </div>
 
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{activeProject.title}</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">{activeProject.title}</h3>
               <div className="flex flex-wrap gap-2 mb-4">
                 {activeProject.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 text-xs rounded-full"
+                    className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <p className="text-gray-700 dark:text-gray-300 mb-6">{activeProject.details}</p>
+              <p className="text-gray-300 mb-6">{activeProject.details}</p>
               <div className="flex space-x-4">
-                {activeProject.github && (
-                  <a
-                    href={activeProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-800 hover:bg-black text-white rounded-lg transition-colors flex items-center gap-2"
-                  >
-                    <GitHub size={18} />
-                    GitHub
-                  </a>
-                )}
                 {activeProject.link && (
                   <a
                     href={activeProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center gap-2"
+                    className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors flex items-center gap-2"
                   >
                     <ExternalLink size={18} />
                     Visitar Projeto
