@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
           {/* FOTO SEM MOLDURA */}
           <div className="w-36 h-36 rounded-full overflow-hidden mb-8">
             <img
-              src="https://i.pinimg.com/736x/26/d9/a1/26d9a16c161d84aae7f93e70962b6675.jpg"
+              src="https://i.pinimg.com/1200x/a0/91/28/a09128ba3e6cb7b34f6df2f2c9938410.jpg"
               alt="foto de perfil"
               className="w-full h-full object-cover rounded-full"
             />
