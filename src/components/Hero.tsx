@@ -17,7 +17,11 @@ const Hero: React.FC = () => {
   }, [displayText]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-16 bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative pt-16 bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900"
+    >
+      {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 opacity-5">
           <div className="text-7xl font-mono text-purple-400 animate-pulse">{'</>'}</div>
@@ -35,17 +39,20 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-4 py-16 z-10">
         <div className="flex flex-col items-center text-center">
-          <div className="w-36 h-36 rounded-full overflow-hidden mb-8 relative group bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 p-1 hover:scale-105 transition-all duration-300">
+          {/* FOTO SEM MOLDURA */}
+          <div className="w-36 h-36 rounded-full overflow-hidden mb-8">
             <img
-              src="https://i.pinimg.com/736x/2f/1f/ab/2f1fab8dd3f41c86398af87345cfc691.jpg"
-              alt=" foto de perfil"
+              src="https://i.pinimg.com/736x/26/d9/a1/26d9a16c161d84aae7f93e70962b6675.jpg"
+              alt="foto de perfil"
               className="w-full h-full object-cover rounded-full"
             />
-            <div className="absolute inset-0 rounded-full border-4 border-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Olá, sou <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">Hino</span>
+            Olá, sou{' '}
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
+              Hino
+            </span>
           </h1>
 
           <h2 className="text-xl md:text-2xl text-gray-300 mb-8 h-8">
@@ -57,11 +64,14 @@ const Hero: React.FC = () => {
             className="text-lg text-gray-400 max-w-3xl mb-10 opacity-0 animate-fade-in-up leading-relaxed"
             style={{ animationDelay: '1.5s', animationFillMode: 'forwards' }}
           >
-            Desenvolvedor Full-Stack apaixonado por tecnologia com mais de 4 anos de experiência criando soluções digitais inovadoras.
-            Especializado em desenvolvimento web moderno, automação inteligente, arquitetura de sistemas escaláveis e experiência do usuário.
-            Transformo ideias complexas em código elegante, funcional e de alta performance, sempre focado em entregar valor real aos usuários.
+            Desenvolvedor Full-Stack apaixonado por tecnologia com mais de 4 anos de experiência
+            criando soluções digitais inovadoras. Especializado em desenvolvimento web moderno,
+            automação inteligente, arquitetura de sistemas escaláveis e experiência do usuário.
+            Transformo ideias complexas em código elegante, funcional e de alta performance, sempre
+            focado em entregar valor real aos usuários.
           </p>
 
+          {/* BOTÕES PRINCIPAIS */}
           <div
             className="flex flex-wrap justify-center gap-4 mb-12 opacity-0 animate-fade-in-up"
             style={{ animationDelay: '2s', animationFillMode: 'forwards' }}
@@ -96,23 +106,27 @@ const Hero: React.FC = () => {
             </a>
           </div>
 
+          {/* SKILLS */}
           <div
             className="flex flex-wrap justify-center gap-3 mb-8 opacity-0 animate-fade-in-up"
             style={{ animationDelay: '2.5s', animationFillMode: 'forwards' }}
           >
-            {['JavaScript', 'TypeScript', 'React', 'Node.js', 'Python', 'Next.js'].map((skill, index) => (
-              <span
-                key={skill}
-                className="px-4 py-2 bg-gray-800 border border-gray-700 text-gray-300 rounded-full text-sm hover:border-purple-500 hover:text-purple-400 transition-all duration-300 hover:scale-105"
-                style={{ animationDelay: `${2.7 + index * 0.1}s` }}
-              >
-                {skill}
-              </span>
-            ))}
+            {['JavaScript', 'TypeScript', 'React', 'Node.js', 'Python', 'Next.js'].map(
+              (skill, index) => (
+                <span
+                  key={skill}
+                  className="px-4 py-2 bg-gray-800 border border-gray-700 text-gray-300 rounded-full text-sm hover:border-purple-500 hover:text-purple-400 transition-all duration-300 hover:scale-105"
+                  style={{ animationDelay: `${2.7 + index * 0.1}s` }}
+                >
+                  {skill}
+                </span>
+              ),
+            )}
           </div>
         </div>
       </div>
 
+      {/* SETA PARA BAIXO */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a href="#about" className="text-gray-400 hover:text-purple-400 transition-colors">
           <ArrowDown size={24} />
