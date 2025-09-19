@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0">
-              &copy; {currentYear} Hino. Todos os direitos reservados.
+              copy; {currentYear} Hino. Todos os direitos reservados.
             </p>
             <div className="flex items-center space-x-4">
               <span className="text-gray-500 text-sm">Feito com</span>
