@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun, Github } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
+import { Menu, X, Github } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,19 +19,20 @@ const Header: React.FC = () => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md py-2'
+          ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg shadow-blue-500/10 py-2'
           : 'bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="flex items-center space-x-2 text-2xl font-bold text-blue-600 dark:text-blue-400">
-          <span>
-            hino<span className="text-purple-600 dark:text-purple-400">.dev</span>
+        <a href="#home" className="flex items-center space-x-2 text-2xl font-bold">
+          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent hover:from-pink-500 hover:via-purple-500 hover:to-blue-400 transition-all duration-500">
+            HIno<span className="text-cyan-400">.dev</span>
           </span>
         </a>
-        {/* Slogan ou saudação */}
-        <span className="hidden md:inline text-gray-500 dark:text-gray-400 ml-6 italic">
-          Bem-vindo(a)! Construindo ideias com código.
+        
+        {/* Professional tagline */}
+        <span className="hidden md:inline text-gray-400 ml-6 italic text-sm">
+          Transformando ideias em código • Criando o futuro digital
         </span>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -50,18 +49,10 @@ const Header: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="Ver GitHub"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:scale-110"
             >
               <Github size={20} />
             </a>
-            <button
-              onClick={toggleTheme}
-              title={theme === 'dark' ? 'Modo claro' : 'Modo escuro'}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              aria-label="Alternar tema"
-            >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
           </div>
         </div>
 
@@ -71,21 +62,13 @@ const Header: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="Ver GitHub"
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:scale-110"
           >
             <Github size={20} />
           </a>
           <button
-            onClick={toggleTheme}
-            title={theme === 'dark' ? 'Modo claro' : 'Modo escuro'}
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            aria-label="Alternar tema"
-          >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-          <button
             onClick={toggleMenu}
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="text-gray-300 hover:text-blue-400 transition-colors"
             aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -95,7 +78,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out ${
+        className={`md:hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-sm shadow-lg transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
