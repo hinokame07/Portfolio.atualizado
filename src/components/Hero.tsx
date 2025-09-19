@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <div className="w-36 h-36 rounded-full overflow-hidden mb-8 relative group bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 p-1 hover:scale-105 transition-all duration-300">
             <img
-              src="/src/profile.gif"
+              src="src/profile.jpg"
               alt="Foto de perfil"
               className="w-full h-full object-cover rounded-full"
             />
