@@ -1,70 +1,160 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Code, Mail, ArrowDown, Briefcase, Award } from "lucide-react";
 
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+const Hero: React.FC = () => {
+  const [displayText, setDisplayText] = useState("");
+  const fullText =
+    "Desenvolvedor Full-Stack & Especialista em Inovação Digital";
+  const [typingComplete, setTypingComplete] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    if (displayText.length < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(fullText.slice(0, displayText.length + 1));
+      }, 80);
+      return () => clearTimeout(timeout);
+    }
+    setTypingComplete(true);
+  }, [displayText]);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  const closeMenu = () => setIsMenuOpen(false);
   return (
-    <header className="fixed w-full z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg shadow-purple-500/10 py-2 transition-all duration-300">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="flex items-center space-x-2 text-2xl font-bold">
-          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
-            Hino<span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">.dev</span>
-          </span>
-        </a>
-        
-        {/* Professional tagline */}
-        <span className="hidden lg:inline text-gray-300 ml-6 italic text-sm">
-          Desenvolvedor Full-Stack • Especialista em Soluções Digitais • Inovação Tecnológica
-        </span>
-
-        <div className="hidden md:flex items-center space-x-8">
-          <nav className="flex space-x-6">
-            <a href="#home" className="nav-link" onClick={closeMenu}>Início</a>
-            <a href="#about" className="nav-link" onClick={closeMenu}>Sobre</a>
-            <a href="#projects" className="nav-link" onClick={closeMenu}>Projetos</a>
-            <a href="#skills" className="nav-link" onClick={closeMenu}>Habilidades</a>
-            <a href="#contact" className="nav-link" onClick={closeMenu}>Contato</a>
-          </nav>
+    <section
+      id="home"
+      className="h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900"
+    >
+      {/* Elementos decorativos de fundo */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 opacity-5">
+          <div className="text-7xl font-mono text-purple-400 animate-pulse">
+            {"</>"}
+          </div>
         </div>
-
-        <div className="md:hidden">
-          <button
-            onClick={toggleMenu}
-            className="text-gray-300 hover:text-purple-400 transition-colors"
-            aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+        <div className="absolute bottom-20 right-10 opacity-5">
+          <div className="text-7xl font-mono text-purple-400 animate-pulse">
+            {"{"}
+          </div>
+        </div>
+        <div className="absolute top-1/2 left-1/4 opacity-3">
+          <div className="text-9xl font-mono text-cyan-400 animate-float">λ</div>
+        </div>
+        <div className="absolute top-1/3 right-1/4 opacity-3">
+          <div className="text-6xl font-mono text-pink-400 animate-pulse">
+            {"{}"}
+          </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-gray-900/98 backdrop-blur-sm shadow-lg border-t border-gray-700">
-          <nav className="flex flex-col py-4">
-            <a href="#home" className="mobile-nav-link" onClick={closeMenu}>Início</a>
-            <a href="#about" className="mobile-nav-link" onClick={closeMenu}>Sobre</a>
-            <a href="#projects" className="mobile-nav-link" onClick={closeMenu}>Projetos</a>
-            <a href="#skills" className="mobile-nav-link" onClick={closeMenu}>Habilidades</a>
-            <a href="#contact" className="mobile-nav-link" onClick={closeMenu}>Contato</a>
-          </nav>
+      <div className="container mx-auto px-4 z-10 flex flex-col items-center justify-center text-center">
+        {/* FOTO SEM MOLDURA */}
+        <div className="w-36 h-36 rounded-full overflow-hidden mb-6">
+          <img
+            src="https://i.pinimg.com/1200x/a0/91/28/a09128ba3e6cb7b34f6df2f2c9938410.jpg"
+            alt="foto de perfil"
+            className="w-full h-full object-cover rounded-full"
+          />
         </div>
-      )}
-    </header>
+
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+          Olá, sou{" "}
+          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
+            Hino
+          </span>
+        </h1>
+
+        <h2 className="text-xl md:text-2xl text-gray-300 mb-6 h-8">
+          {displayText}
+          {!typingComplete && (
+            <span className="animate-pulse text-purple-400">|</span>
+          )}
+        </h2>
+
+        <p
+          className="text-lg text-gray-400 max-w-3xl mb-8 opacity-0 animate-fade-in-up leading-relaxed"
+          style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
+        >
+          Desenvolvedor Full-Stack apaixonado por tecnologia com mais de 4 anos
+          de experiência criando soluções digitais inovadoras. Especializado em
+          desenvolvimento web moderno, automação inteligente, arquitetura de
+          sistemas escaláveis e experiência do usuário. Transformo ideias
+          complexas em código elegante, funcional e de alta performance, sempre
+          focado em entregar valor real aos usuários.
+        </p>
+
+        {/* BOTÕES PRINCIPAIS */}
+        <div
+          className="flex flex-wrap justify-center gap-4 mb-10 opacity-0 animate-fade-in-up"
+          style={{ animationDelay: "2s", animationFillMode: "forwards" }}
+        >
+          <a
+            href="#projects"
+            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-2 group"
+          >
+            <Code
+              size={18}
+              className="group-hover:rotate-12 transition-transform duration-300"
+            />
+            Ver Projetos
+          </a>
+          <a
+            href="#contact"
+            className="px-8 py-4 bg-gray-800 border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-2 group"
+          >
+            <Mail
+              size={18}
+              className="group-hover:bounce transition-transform duration-300"
+            />
+            Fale Comigo
+          </a>
+          <a
+            href="#about"
+            className="px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25 flex items-center gap-2 group"
+          >
+            <Briefcase
+              size={18}
+              className="group-hover:rotate-12 transition-transform duration-300"
+            />
+            Sobre Mim
+          </a>
+          <a
+            href="#skills"
+            className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2 group"
+          >
+            <Award
+              size={18}
+              className="group-hover:bounce transition-transform duration-300"
+            />
+            Habilidades
+          </a>
+        </div>
+
+        {/* SKILLS */}
+        <div
+          className="flex flex-wrap justify-center gap-3 opacity-0 animate-fade-in-up"
+          style={{ animationDelay: "2.5s", animationFillMode: "forwards" }}
+        >
+          {["JavaScript", "TypeScript", "React", "Node.js", "Python", "Next.js"].map(
+            (skill, index) => (
+              <span
+                key={skill}
+                className="px-4 py-2 bg-gray-800 border border-gray-700 text-gray-300 rounded-full text-sm hover:border-purple-500 hover:text-purple-400 transition-all duration-300 hover:scale-105"
+                style={{ animationDelay: `${2.7 + index * 0.1}s` }}
+              >
+                {skill}
+              </span>
+            )
+          )}
+        </div>
+      </div>
+
+      {/* SETA PARA BAIXO */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" className="text-gray-400 hover:text-purple-400 transition-colors">
+          <ArrowDown size={24} />
+        </a>
+      </div>
+    </section>
   );
 };
 
-export default Header;
+export default Hero;
+
