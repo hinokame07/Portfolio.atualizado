@@ -20,24 +20,24 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900"
+      className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 hero-section"
     >
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 opacity-5">
+        <div className="absolute top-20 left-10 opacity-5 hero-bg-element">
           <div className="text-7xl font-mono text-purple-400 animate-pulse">
             {"</>"}
           </div>
         </div>
-        <div className="absolute bottom-20 right-10 opacity-5">
+        <div className="absolute bottom-20 right-10 opacity-5 hero-bg-element">
           <div className="text-7xl font-mono text-purple-400 animate-pulse">
             {"{"}
           </div>
         </div>
-        <div className="absolute top-1/2 left-1/4 opacity-3">
+        <div className="absolute top-1/2 left-1/4 opacity-3 hero-bg-element">
           <div className="text-9xl font-mono text-cyan-400 animate-float">λ</div>
         </div>
-        <div className="absolute top-1/3 right-1/4 opacity-3">
+        <div className="absolute top-1/3 right-1/4 opacity-3 hero-bg-element">
           <div className="text-6xl font-mono text-pink-400 animate-pulse">
             {"{}"}
           </div>
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-4 z-10 flex flex-col items-center justify-center text-center">
         {/* FOTO SEM MOLDURA */}
-        <div className="w-36 h-36 rounded-full overflow-hidden mb-6">
+        <div className="w-36 h-36 rounded-full overflow-hidden mb-6 hero-avatar">
           <img
             src="https://i.pinimg.com/1200x/a0/91/28/a09128ba3e6cb7b34f6df2f2c9938410.jpg"
             alt="foto de perfil"
@@ -54,14 +54,14 @@ const Hero: React.FC = () => {
           />
         </div>
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 hero-title">
           Olá, sou{" "}
           <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
             Hino
           </span>
         </h1>
 
-        <h2 className="text-xl md:text-2xl text-gray-300 mb-6 h-8">
+        <h2 className="text-xl md:text-2xl text-gray-300 mb-6 h-8 hero-subtitle">
           {displayText}
           {!typingComplete && (
             <span className="animate-pulse text-purple-400">|</span>
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
         </h2>
 
         <p
-          className="text-lg text-gray-400 max-w-3xl mb-8 opacity-0 animate-fade-in-up leading-relaxed"
+          className="text-lg text-gray-400 max-w-3xl mb-8 opacity-0 animate-fade-in-up leading-relaxed hero-description"
           style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
         >
           Desenvolvedor Full-Stack apaixonado por tecnologia com mais de 4 anos
@@ -82,12 +82,12 @@ const Hero: React.FC = () => {
 
         {/* BOTÕES PRINCIPAIS */}
         <div
-          className="flex flex-wrap justify-center gap-4 mb-10 opacity-0 animate-fade-in-up"
+          className="flex flex-wrap justify-center gap-4 mb-10 opacity-0 animate-fade-in-up hero-buttons"
           style={{ animationDelay: "2s", animationFillMode: "forwards" }}
         >
           <a
             href="#projects"
-            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-2 group"
+            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-2 group hero-button"
           >
             <Code
               size={18}
@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
           </a>
           <a
             href="#contact"
-            className="px-8 py-4 bg-gray-800 border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-2 group"
+            className="px-8 py-4 bg-gray-800 border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-2 group hero-button"
           >
             <Mail
               size={18}
@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
           </a>
           <a
             href="#about"
-            className="px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25 flex items-center gap-2 group"
+            className="px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25 flex items-center gap-2 group hero-button"
           >
             <Briefcase
               size={18}
@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
           </a>
           <a
             href="#skills"
-            className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2 group"
+            className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2 group hero-button"
           >
             <Award
               size={18}
@@ -129,14 +129,14 @@ const Hero: React.FC = () => {
 
         {/* SKILLS */}
         <div
-          className="flex flex-wrap justify-center gap-3 opacity-0 animate-fade-in-up"
+          className="flex flex-wrap justify-center gap-3 opacity-0 animate-fade-in-up hero-skills"
           style={{ animationDelay: "2.5s", animationFillMode: "forwards" }}
         >
           {["JavaScript", "TypeScript", "React", "Node.js", "Python", "Next.js"].map(
             (skill, index) => (
               <span
                 key={skill}
-                className="px-4 py-2 bg-gray-800 border border-gray-700 text-gray-300 rounded-full text-sm hover:border-purple-500 hover:text-purple-400 transition-all duration-300 hover:scale-105"
+                className="px-4 py-2 bg-gray-800 border border-gray-700 text-gray-300 rounded-full text-sm hover:border-purple-500 hover:text-purple-400 transition-all duration-300 hover:scale-105 hero-skill-tag"
                 style={{ animationDelay: `${2.7 + index * 0.1}s` }}
               >
                 {skill}

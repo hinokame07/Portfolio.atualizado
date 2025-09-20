@@ -88,4 +88,126 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
+  
+  /* Hero Section - Full Viewport Height */
+  .hero-section {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  }
+  
+  /* Mobile Responsive Improvements */
+  @media (max-width: 768px) {
+    /* Hero Section Mobile Optimizations */
+    .hero-section {
+      padding: 1rem;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+    
+    /* Mobile Typography Scaling */
+    .hero-title {
+      font-size: 2.5rem !important;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.125rem !important;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero-description {
+      font-size: 1rem !important;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      padding: 0 0.5rem;
+    }
+    
+    /* Mobile Button Improvements */
+    .hero-buttons {
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 2rem auto;
+    }
+    
+    .hero-button {
+      width: 100%;
+      justify-content: center;
+      padding: 0.875rem 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    /* Mobile Skills Tags */
+    .hero-skills {
+      gap: 0.5rem;
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+    
+    .hero-skill-tag {
+      font-size: 0.8rem;
+      padding: 0.5rem 0.75rem;
+    }
+    
+    /* Mobile Avatar */
+    .hero-avatar {
+      width: 120px !important;
+      height: 120px !important;
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Mobile Background Elements - Reduce opacity */
+    .hero-bg-element {
+      opacity: 0.02 !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Extra small mobile devices */
+    .hero-title {
+      font-size: 2.25rem !important;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem !important;
+    }
+    
+    .hero-description {
+      font-size: 0.9rem !important;
+      padding: 0 0.25rem;
+    }
+    
+    .hero-avatar {
+      width: 100px !important;
+      height: 100px !important;
+    }
+    
+    .hero-button {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    /* Very small mobile devices */
+    .hero-title {
+      font-size: 2rem !important;
+    }
+    
+    .hero-subtitle {
+      font-size: 0.95rem !important;
+    }
+    
+    .hero-description {
+      font-size: 0.85rem !important;
+    }
+    
+    .hero-skill-tag {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.6rem;
+    }
+  }
 }
