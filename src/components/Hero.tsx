@@ -1,75 +1,161 @@
-import React from "react";
-import { Heart } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Code, Mail, ArrowDown, Briefcase, Award } from "lucide-react";
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+const Hero: React.FC = () => {
+  const [displayText, setDisplayText] = useState("");
+  const fullText =
+    "Desenvolvedor Full-Stack & Especialista em Inovação Digital";
+  const [typingComplete, setTypingComplete] = useState(false);
+
+  useEffect(() => {
+    if (displayText.length < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(fullText.slice(0, displayText.length + 1));
+      }, 80);
+      return () => clearTimeout(timeout);
+    }
+    setTypingComplete(true);
+  }, [displayText]);
 
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 text-white py-12">
-      <div className="container mx-auto px-4">
-        {/* Grid Principal */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-          {/* Sobre */}
-          <div className="animate-fade-in-up">
-            <h3 className="text-xl font-bold mb-4">Hino</h3>
-            <p className="text-gray-300 mb-4">
-              Desenvolvedor Full-Stack especializado em criar soluções digitais inovadoras
-              que transformam ideias em realidade. Comprometido com excelência técnica
-              e impacto positivo através da tecnologia.
-            </p>
-            <div className="flex space-x-2">
-              <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700">Full-Stack</span>
-              <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700">React</span>
-              <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700">Node.js</span>
-            </div>
-          </div>
-
-          {/* Links Rápidos */}
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            <h3 className="text-xl font-bold mb-4">Links Rápidos</h3>
-            <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-purple-400 transition-colors">Início</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-purple-400 transition-colors">Sobre</a></li>
-              <li><a href="#projects" className="text-gray-300 hover:text-purple-400 transition-colors">Projetos</a></li>
-              <li><a href="#skills" className="text-gray-300 hover:text-purple-400 transition-colors">Habilidades</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-purple-400 transition-colors">Contato</a></li>
-            </ul>
-          </div>
-
-          {/* Especialidades */}
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <h3 className="text-xl font-bold mb-4">Especialidades</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Desenvolvimento Web Full-Stack</li>
-              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Arquitetura de Sistemas</li>
-              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Automação e Integração</li>
-              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>UI/UX Design</li>
-              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Gestão de Projetos</li>
-            </ul>
+    <section
+      id="home"
+      className="h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900"
+    >
+      {/* Elementos decorativos de fundo */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 opacity-5">
+          <div className="text-7xl font-mono text-purple-400 animate-pulse">
+            {"</>"}
           </div>
         </div>
-
-        {/* Linha Final */}
-        <div className="pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 mb-4 md:mb-0">
-              &copy; {currentYear} Hino. Todos os direitos reservados.
-            </p>
-            <div className="flex items-center space-x-4">
-              <span className="text-gray-500 text-sm">Feito com</span>
-              <Heart size={14} className="text-red-500" />
-              <span className="text-gray-500 text-sm">e tecnologias modernas</span>
-            </div>
+        <div className="absolute bottom-20 right-10 opacity-5">
+          <div className="text-7xl font-mono text-purple-400 animate-pulse">
+            {"{"}
           </div>
-          <div className="text-center mt-4">
-            <p className="text-gray-500 text-sm">
-              Desenvolvedor Full-Stack • São Paulo, Brasil • trabalhohino@gmail.com
-            </p>
+        </div>
+        <div className="absolute top-1/2 left-1/4 opacity-3">
+          <div className="text-9xl font-mono text-cyan-400 animate-float">λ</div>
+        </div>
+        <div className="absolute top-1/3 right-1/4 opacity-3">
+          <div className="text-6xl font-mono text-pink-400 animate-pulse">
+            {"{}"}
           </div>
         </div>
       </div>
-    </footer>
+
+      <div className="container mx-auto px-4 py-16 z-10">
+        <div className="flex flex-col items-center text-center">
+          {/* FOTO SEM MOLDURA */}
+          <div className="w-36 h-36 rounded-full overflow-hidden mb-8">
+            <img
+              src="https://i.pinimg.com/1200x/a0/91/28/a09128ba3e6cb7b34f6df2f2c9938410.jpg"
+              alt="foto de perfil"
+              className="w-full h-full object-cover rounded-full"
+            />
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            Olá, sou{" "}
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
+              Hino
+            </span>
+          </h1>
+
+          <h2 className="text-xl md:text-2xl text-gray-300 mb-8 h-8">
+            {displayText}
+            {!typingComplete && (
+              <span className="animate-pulse text-purple-400">|</span>
+            )}
+          </h2>
+
+          <p
+            className="text-lg text-gray-400 max-w-3xl mb-10 opacity-0 animate-fade-in-up leading-relaxed"
+            style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
+          >
+            Desenvolvedor Full-Stack apaixonado por tecnologia com mais de 4
+            anos de experiência criando soluções digitais inovadoras.
+            Especializado em desenvolvimento web moderno, automação inteligente,
+            arquitetura de sistemas escaláveis e experiência do usuário.
+            Transformo ideias complexas em código elegante, funcional e de alta
+            performance, sempre focado em entregar valor real aos usuários.
+          </p>
+
+          {/* BOTÕES PRINCIPAIS */}
+          <div
+            className="flex flex-wrap justify-center gap-4 mb-12 opacity-0 animate-fade-in-up"
+            style={{ animationDelay: "2s", animationFillMode: "forwards" }}
+          >
+            <a
+              href="#projects"
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-2 group"
+            >
+              <Code
+                size={18}
+                className="group-hover:rotate-12 transition-transform duration-300"
+              />
+              Ver Projetos
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-4 bg-gray-800 border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-2 group"
+            >
+              <Mail
+                size={18}
+                className="group-hover:bounce transition-transform duration-300"
+              />
+              Fale Comigo
+            </a>
+            <a
+              href="#about"
+              className="px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25 flex items-center gap-2 group"
+            >
+              <Briefcase
+                size={18}
+                className="group-hover:rotate-12 transition-transform duration-300"
+              />
+              Sobre Mim
+            </a>
+            <a
+              href="#skills"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2 group"
+            >
+              <Award
+                size={18}
+                className="group-hover:bounce transition-transform duration-300"
+              />
+              Habilidades
+            </a>
+          </div>
+
+          {/* SKILLS */}
+          <div
+            className="flex flex-wrap justify-center gap-3 mb-8 opacity-0 animate-fade-in-up"
+            style={{ animationDelay: "2.5s", animationFillMode: "forwards" }}
+          >
+            {["JavaScript", "TypeScript", "React", "Node.js", "Python", "Next.js"].map(
+              (skill, index) => (
+                <span
+                  key={skill}
+                  className="px-4 py-2 bg-gray-800 border border-gray-700 text-gray-300 rounded-full text-sm hover:border-purple-500 hover:text-purple-400 transition-all duration-300 hover:scale-105"
+                  style={{ animationDelay: `${2.7 + index * 0.1}s` }}
+                >
+                  {skill}
+                </span>
+              )
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* SETA PARA BAIXO */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" className="text-gray-400 hover:text-purple-400 transition-colors">
+          <ArrowDown size={24} />
+        </a>
+      </div>
+    </section>
   );
 };
 
-export default Footer;
+export default Hero;
