@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 hero-section"
+      className="h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 overflow-hidden"
     >
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 overflow-hidden">
