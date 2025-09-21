@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
       </div>
       <div className="h-3 bg-gray-600 rounded-full overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000 ease-out"
+          className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 ease-out"
           style={{
             width: `${skill.level}%`,
             animation: 'progressAnimation 1.5s ease-out forwards'
@@ -48,9 +48,9 @@ const Skills: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Minhas <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Habilidades</span>
+            Minhas <span className="text-blue-600 dark:text-blue-400">Habilidades</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             As habilidades que desenvolvi ao longo da minha jornada de aprendizado.
             Estou sempre buscando aprimorar e expandir meus conhecimentos.
