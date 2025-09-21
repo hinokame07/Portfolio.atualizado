@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,7 +10,10 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-900 text-white w-full overflow-x-hidden">
       <Header />
-      <main>
+      <main
+        className="snap-y snap-mandatory h-full w-full overflow-y-auto"
+        style={{ scrollSnapType: 'y mandatory', WebkitOverflowScrolling: 'touch' }}
+      >
         <Hero />
         <About />
         <Projects />

@@ -13,6 +13,24 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Fecha menu ao clicar fora ou pressionar ESC
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsMenuOpen(false);
+    };
+    const handleClick = (e: MouseEvent) => {
+      const menu = document.getElementById('mobile-menu');
+      if (menu && !menu.contains(e.target as Node)) setIsMenuOpen(false);
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleClick);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleClick);
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
@@ -58,16 +76,20 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
+        id="mobile-menu"
         className={`md:hidden absolute top-full left-0 w-full bg-gray-900/98 backdrop-blur-sm shadow-lg transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-full'
         }`}
+        tabIndex={-1}
+        aria-modal={isMenuOpen}
+        role="dialog"
       >
         <nav className="flex flex-col py-4">
-          <a href="#home" className="mobile-nav-link" onClick={toggleMenu}>Início</a>
-          <a href="#about" className="mobile-nav-link" onClick={toggleMenu}>Sobre</a>
-          <a href="#projects" className="mobile-nav-link" onClick={toggleMenu}>Projetos</a>
-          <a href="#skills" className="mobile-nav-link" onClick={toggleMenu}>Habilidades</a>
-          <a href="#contact" className="mobile-nav-link" onClick={toggleMenu}>Contato</a>
+          <a href="#home" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Início</a>
+          <a href="#about" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Sobre</a>
+          <a href="#projects" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Projetos</a>
+          <a href="#skills" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Habilidades</a>
+          <a href="#contact" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Contato</a>
         </nav>
       </div>
     </header>
