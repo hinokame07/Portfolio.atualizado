@@ -119,9 +119,9 @@ const Projects: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Meus <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Projetos</span>
+            Meus <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Projetos</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6" />
           <p className="text-gray-300 max-w-3xl mx-auto">
             Explore uma seleção dos projetos que desenvolvi ao longo da minha jornada como desenvolvedor.
             Cada projeto representa não apenas uma solução técnica, mas também um marco no meu crescimento profissional e criativo.
@@ -134,7 +134,7 @@ const Projects: React.FC = () => {
           {/* Botão Esquerda */}
           <button
             onClick={handlePrev}
-            className="absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+            className="absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
             aria-label="Anterior"
           >
             <svg
@@ -153,7 +153,7 @@ const Projects: React.FC = () => {
           {/* Botão Direita */}
           <button
             onClick={handleNext}
-            className="absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+            className="absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
             aria-label="Próximo"
           >
             <svg
@@ -202,7 +202,7 @@ const Projects: React.FC = () => {
                             e.stopPropagation();
                             openProjectDetails(project);
                           }}
-                          className="text-white bg-purple-600 hover:bg-purple-700 p-2 rounded-full transition-colors"
+                          className="text-white bg-blue-600 hover:bg-blue-700 p-2 rounded-full transition-colors"
                         >
                           <Info size={18} />
                         </button>
@@ -213,7 +213,7 @@ const Projects: React.FC = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               onClick={(e) => e.stopPropagation()}
-                              className="text-white bg-pink-600 hover:bg-pink-700 p-2 rounded-full transition-colors"
+                              className="text-white bg-purple-600 hover:bg-purple-700 p-2 rounded-full transition-colors"
                             >
                               <ExternalLink size={18} />
                             </a>
@@ -229,7 +229,7 @@ const Projects: React.FC = () => {
                       {project.tags.map((tag, index) => (
                         <span
                           key={index}
-                          className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700"
+                          className="px-3 py-1 bg-blue-900/50 text-blue-300 text-xs rounded-full border border-blue-700"
                         >
                           {tag}
                         </span>
@@ -272,7 +272,7 @@ const Projects: React.FC = () => {
                 {activeProject.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700"
+                    className="px-3 py-1 bg-blue-900/50 text-blue-300 text-xs rounded-full border border-blue-700"
                   >
                     {tag}
                   </span>
@@ -285,7 +285,7 @@ const Projects: React.FC = () => {
                     href={activeProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors flex items-center gap-2"
+                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center gap-2"
                   >
                     <ExternalLink size={18} />
                     Visitar Projeto

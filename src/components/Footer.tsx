@@ -15,31 +15,31 @@ const Footer: React.FC = () => {
               Comprometido com excelência técnica e impacto positivo através da tecnologia.
             </p>
             <div className="flex space-x-2">
-              <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700">Full-Stack</span>
+              <span className="px-3 py-1 bg-blue-900/50 text-blue-300 text-xs rounded-full border border-blue-700">Full-Stack</span>
               <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700">React</span>
-              <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full border border-purple-700">Node.js</span>
+              <span className="px-3 py-1 bg-blue-900/50 text-blue-300 text-xs rounded-full border border-blue-700">Node.js</span>
             </div>
           </div>
 
           <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <h3 className="text-xl font-bold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-purple-400 transition-colors">Início</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-purple-400 transition-colors">Sobre</a></li>
-              <li><a href="#projects" className="text-gray-300 hover:text-purple-400 transition-colors">Projetos</a></li>
-              <li><a href="#skills" className="text-gray-300 hover:text-purple-400 transition-colors">Habilidades</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-purple-400 transition-colors">Contato</a></li>
+              <li><a href="#home" className="text-gray-300 hover:text-blue-400 transition-colors">Início</a></li>
+              <li><a href="#about" className="text-gray-300 hover:text-blue-400 transition-colors">Sobre</a></li>
+              <li><a href="#projects" className="text-gray-300 hover:text-blue-400 transition-colors">Projetos</a></li>
+              <li><a href="#skills" className="text-gray-300 hover:text-blue-400 transition-colors">Habilidades</a></li>
+              <li><a href="#contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contato</a></li>
             </ul>
           </div>
 
           <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-xl font-bold mb-4">Especialidades</h3>
             <ul className="space-y-3">
-              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Desenvolvimento Web Full-Stack</li>
+              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Desenvolvimento Web Full-Stack</li>
               <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Arquitetura de Sistemas</li>
-              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Automação e Integração</li>
+              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Automação e Integração</li>
               <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>UI/UX Design</li>
-              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Gestão de Projetos</li>
+              <li className="flex items-center text-gray-300"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Gestão de Projetos</li>
             </ul>
           </div>
         </div>

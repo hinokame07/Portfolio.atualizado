@@ -7,16 +7,16 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Sobre <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Mim</span>
+            Sobre <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Mim</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 animate-fade-in-up">
             <div className="bg-gray-700 p-6 rounded-lg shadow-md mb-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-600">
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                <Target className="mr-2 text-purple-400" size={20} />
+                <Target className="mr-2 text-blue-400" size={20} />
                 Quem sou eu
               </h3>
               <p className="text-gray-300 mb-4">
@@ -29,7 +29,7 @@ const About: React.FC = () => {
             
             <div className="flex flex-col space-y-4">
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-purple-900 flex items-center justify-center text-purple-400 mr-4 hover:scale-110 transition-transform duration-300 border border-purple-700">
+                <div className="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center text-blue-400 mr-4 hover:scale-110 transition-transform duration-300 border border-blue-700">
                   <Calendar size={24} />
                 </div>
                 <div>
@@ -49,7 +49,7 @@ const About: React.FC = () => {
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-purple-900 flex items-center justify-center text-purple-400 mr-4 hover:scale-110 transition-transform duration-300 border border-purple-700">
+                <div className="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center text-blue-400 mr-4 hover:scale-110 transition-transform duration-300 border border-blue-700">
                   <Code size={24} />
                 </div>
                 <div>
@@ -63,12 +63,12 @@ const About: React.FC = () => {
           <div className="order-1 md:order-2 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <div className="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-600">
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                <Rocket className="mr-2 text-purple-400" size={20} />
+                <Rocket className="mr-2 text-blue-400" size={20} />
                 Minha História
               </h3>
               <div className="space-y-6">
-                <div className="relative pl-8 border-l-2 border-purple-500">
-                  <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9px] top-0"></div>
+                <div className="relative pl-8 border-l-2 border-blue-500">
+                  <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-0"></div>
                   <h4 className="text-lg font-medium text-white">Descoberta da Programação</h4>
                   <p className="text-gray-300 mt-1">
                     Aos 10 anos, descobri o fascinante mundo da programação através da criação de bots automatizados. O que começou como curiosidade rapidamente se transformou em paixão, levando-me a explorar Python, JavaScript e outras tecnologias.
@@ -83,8 +83,8 @@ const About: React.FC = () => {
                   </p>
                 </div>
                 
-                <div className="relative pl-8 border-l-2 border-purple-500">
-                  <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9px] top-0"></div>
+                <div className="relative pl-8 border-l-2 border-blue-500">
+                  <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-0"></div>
                   <h4 className="text-lg font-medium text-white">Desenvolvimento de Soluções</h4>
                   <p className="text-gray-300 mt-1">
                     Criei sistemas automatizados complexos que evoluíram de funcionalidades básicas para plataformas robustas. Enfrentei desafios técnicos significativos, aprendendo sobre arquitetura de sistemas, escalabilidade e resolução de problemas.
@@ -104,7 +104,7 @@ const About: React.FC = () => {
             {/* New section: Values and Vision */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-600 mt-6">
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                <Lightbulb className="mr-2 text-purple-400" size={20} />
+                <Lightbulb className="mr-2 text-blue-400" size={20} />
                 Valores e Visão
               </h3>
               <div className="space-y-4">

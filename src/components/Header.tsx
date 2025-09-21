@@ -19,13 +19,13 @@ const Header: React.FC = () => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg shadow-purple-500/10 py-2'
+          ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg shadow-blue-500/10 py-2'
           : 'bg-gray-900/50 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#home" className="flex items-center space-x-2 text-2xl font-bold">
-          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
             Hino<span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">.dev</span>
           </span>
         </a>
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-300 hover:text-purple-400 transition-colors"
+            className="text-gray-300 hover:text-blue-400 transition-colors"
             aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
