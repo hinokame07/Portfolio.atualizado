@@ -17,12 +17,10 @@ const Hero: React.FC = () => {
     setTypingComplete(true);
   }, [displayText]);
 
-
   return (
     <section
       id="home"
-      className="hero-section min-h-screen h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 via-blue-900/30 to-purple-900/20 overflow-hidden snap-start"
-      style={{ scrollSnapAlign: 'start' }}
+      className="h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900"
     >
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 overflow-hidden">
@@ -50,7 +48,7 @@ const Hero: React.FC = () => {
         {/* FOTO SEM MOLDURA */}
         <div className="w-36 h-36 rounded-full overflow-hidden mb-6">
           <img
-            src="https://i.pinimg.com/1200x/71/1e/a0/711ea0830f36b4c146977dd42f1c4b39.jpg"
+            src="https://i.pinimg.com/1200x/f7/ea/71/f7ea71186234764e29ddefb345e09d05.jpg"
             alt="foto de perfil"
             className="w-full h-full object-cover rounded-full"
           />
@@ -149,13 +147,13 @@ const Hero: React.FC = () => {
       </div>
 
       {/* SETA PARA BAIXO */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-        <a href="#about" className="text-gray-400 hover:text-purple-400 transition-colors" aria-label="Role para ver mais">
-          <ArrowDown size={32} />
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" className="text-gray-400 hover:text-purple-400 transition-colors">
+          <ArrowDown size={24} />
         </a>
       </div>
     </section>
   );
-}
+};
 
 export default Hero;
