@@ -7,9 +7,9 @@ const Contact: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Vamos <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Conversar?</span>
+            Vamos <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Conversar?</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-3xl mx-auto">
             Tem um projeto em mente? Quer discutir uma oportunidade de colaboração ou simplesmente trocar ideias sobre tecnologia e inovação?
             Estou sempre aberto para novas conexões e desafios interessantes. Vamos construir algo incrível juntos!
@@ -23,13 +23,13 @@ const Contact: React.FC = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="bg-blue-900/50 p-3 rounded-full text-blue-400 mr-4 border border-blue-700">
+                  <div className="bg-purple-900/50 p-3 rounded-full text-purple-400 mr-4 border border-purple-700">
                     <Mail size={20} />
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-white">Email Profissional</h4>
                     <p className="text-gray-300 mt-1">trabalhohino@gmail.com</p>
-                    <a href="mailto:trabalhohino@gmail.com" className="text-blue-400 text-sm hover:underline mt-1 inline-block">
+                    <a href="mailto:trabalhohino@gmail.com" className="text-purple-400 text-sm hover:underline mt-1 inline-block">
                       Enviar email agora
                     </a>
                   </div>
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-blue-900/50 p-3 rounded-full text-blue-400 mr-4 border border-blue-700">
+                  <div className="bg-purple-900/50 p-3 rounded-full text-purple-400 mr-4 border border-purple-700">
                     <Phone size={20} />
                   </div>
                   <div>
@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 text-white"
+                    className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-gray-700 text-white"
                     placeholder="Como posso te chamar?"
                   />
                 </div>
@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 text-white"
+                    className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-gray-700 text-white"
                     placeholder="seu.email@exemplo.com"
                   />
                 </div>
@@ -109,14 +109,14 @@ const Contact: React.FC = () => {
                     name="message"
                     required
                     rows={4}
-                    className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 text-white"
+                    className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-gray-700 text-white"
                     placeholder="O que você gostaria de conversar?"
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Enviar mensagem
                 </button>
