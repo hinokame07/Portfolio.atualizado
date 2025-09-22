@@ -13,37 +13,19 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Fecha menu ao clicar fora ou pressionar ESC
-  useEffect(() => {
-    if (!isMenuOpen) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsMenuOpen(false);
-    };
-    const handleClick = (e: MouseEvent) => {
-      const menu = document.getElementById('mobile-menu');
-      if (menu && !menu.contains(e.target as Node)) setIsMenuOpen(false);
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleClick);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleClick);
-    };
-  }, [isMenuOpen]);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg shadow-purple-500/10 py-2'
+          ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg shadow-blue-500/10 py-2'
           : 'bg-gray-900/50 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#home" className="flex items-center space-x-2 text-2xl font-bold">
-          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
             Hino<span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">.dev</span>
           </span>
         </a>
@@ -66,7 +48,7 @@ const Header: React.FC = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-300 hover:text-purple-400 transition-colors"
+            className="text-gray-300 hover:text-blue-400 transition-colors"
             aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -76,20 +58,16 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        id="mobile-menu"
         className={`md:hidden absolute top-full left-0 w-full bg-gray-900/98 backdrop-blur-sm shadow-lg transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-full'
         }`}
-        tabIndex={-1}
-        aria-modal={isMenuOpen}
-        role="dialog"
       >
         <nav className="flex flex-col py-4">
-          <a href="#home" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Início</a>
-          <a href="#about" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Sobre</a>
-          <a href="#projects" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Projetos</a>
-          <a href="#skills" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Habilidades</a>
-          <a href="#contact" className="mobile-nav-link" onClick={() => setIsMenuOpen(false)}>Contato</a>
+          <a href="#home" className="mobile-nav-link" onClick={toggleMenu}>Início</a>
+          <a href="#about" className="mobile-nav-link" onClick={toggleMenu}>Sobre</a>
+          <a href="#projects" className="mobile-nav-link" onClick={toggleMenu}>Projetos</a>
+          <a href="#skills" className="mobile-nav-link" onClick={toggleMenu}>Habilidades</a>
+          <a href="#contact" className="mobile-nav-link" onClick={toggleMenu}>Contato</a>
         </nav>
       </div>
     </header>
